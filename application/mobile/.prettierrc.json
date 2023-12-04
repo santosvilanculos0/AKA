@@ -1,0 +1,11 @@
+{
+	"arrowParens": "avoid",
+	"editorconfig": true,
+	"jsxSingleQuote": true,
+	"semi": true,
+	"singleAttributePerLine": true,
+	"singleQuote": true,
+	"tabWidth": 2,
+	"trailingComma": "none",
+	"useTabs": true
+}
