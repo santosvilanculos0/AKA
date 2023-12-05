@@ -1,18 +1,7 @@
-<!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+@extends('layouts.default')
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport"
-    content="width=device-width, initial-scale=1, viewport-fit=cover" />
-
-  <title>{{ config('app.name') }}</title>
-
-  @vite(['resources/scss/index.scss', 'resources/js/index.js'])
-</head>
-
-<body class="d-flex flex-column">
-  <div class="page page-center">
+@section('body')
+  <div class="page page-center d-flex flex-column">
     <div class="container-tight container py-4">
       <div class="mb-4 text-center">
         <a class="navbar-brand navbar-brand-autodark" href=".">
@@ -120,6 +109,4 @@
       </div>
     </div>
   </div>
-</body>
-
-</html>
+@endsection

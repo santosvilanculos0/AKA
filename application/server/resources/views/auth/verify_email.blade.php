@@ -1,20 +1,7 @@
-<!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+@extends('layouts.default')
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport"
-    content="width=device-width, initial-scale=1, viewport-fit=cover" />
-
-  <title>{{ config('app.name') }}</title>
-
-  @vite(['resources/scss/index.scss', 'resources/js/index.js'])
-</head>
-
-<body class="d-flex flex-column">
-  <script src="./dist/js/demo-theme.min.js?1692870487"></script>
-
-  <div class="page page-center">
+@section('body')
+  <div class="page page-center d-flex flex-column">
 
     <div class="container-tight container py-4">
 
@@ -24,9 +11,9 @@
             <div>
               <!-- Download SVG icon from http://tabler-icons.io/i/info-circle -->
               <svg class="icon alert-icon" xmlns="http://www.w3.org/2000/svg"
-                width="24" height="24" viewBox="0 0 24 24"
-                stroke-width="2" stroke="currentColor" fill="none"
-                stroke-linecap="round" stroke-linejoin="round">
+                width="24" height="24" viewBox="0 0 24 24" stroke-width="2"
+                stroke="currentColor" fill="none" stroke-linecap="round"
+                stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                 <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"></path>
                 <path d="M12 9h.01"></path>
@@ -80,10 +67,9 @@
 
               <button class="btn w-100" type="submit">
                 <svg class="icon icon-tabler icon-tabler-logout"
-                  xmlns="http://www.w3.org/2000/svg" width="24"
-                  height="24" viewBox="0 0 24 24" stroke-width="2"
-                  stroke="currentColor" fill="none" stroke-linecap="round"
-                  stroke-linejoin="round">
+                  xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                  fill="none" stroke-linecap="round" stroke-linejoin="round">
                   <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                   <path
                     d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2" />
@@ -106,6 +92,4 @@
       </div>
     </div>
   </div>
-</body>
-
-</html>
+@endsection

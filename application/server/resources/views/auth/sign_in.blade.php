@@ -1,18 +1,7 @@
-<!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+@extends('layouts.default')
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport"
-    content="width=device-width, initial-scale=1, viewport-fit=cover" />
-
-  <title>{{ config('app.name') }}</title>
-
-  @vite(['resources/scss/index.scss', 'resources/js/index.js'])
-</head>
-
-<body class="d-flex flex-column">
-  <div class="page page-center">
+@section('body')
+  <div class="page page-center d-flex flex-column">
     <div class="container-tight container py-4">
       <div class="mb-4 text-center">
         <a class="navbar-brand navbar-brand-autodark" href=".">
@@ -30,8 +19,8 @@
             <div class="mb-3">
               <label class="form-label" for="email">Email address</label>
               <input id="email" name="email" type="email"
-                value="{{ old('email') }}" @class(['form-control', 'is-invalid' => $errors->get('email')])
-                required autocomplete="email">
+                value="{{ old('email') }}" @class(['form-control', 'is-invalid' => $errors->get('email')]) required
+                autocomplete="email">
               @error('email')
                 <div class="invalid-feedback">{{ $message }}</div>
               @enderror
@@ -72,8 +61,7 @@
 
             <div class="mb-2">
               <label class="form-check">
-                <input class="form-check-input" name="remember"
-                  type="checkbox" />
+                <input class="form-check-input" name="remember" type="checkbox" />
                 <span class="form-check-label">Remember me on this device</span>
               </label>
             </div>
@@ -86,12 +74,11 @@
           </form>
         </div>
       </div>
+
       <div class="text-secondary mt-3 text-center">
         Don't have account yet?
         <a href="{{ route('sign_up') }}" tabindex="-1">Sign up</a>
       </div>
     </div>
   </div>
-</body>
-
-</html>
+@endsection

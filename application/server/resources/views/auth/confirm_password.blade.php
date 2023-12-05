@@ -1,18 +1,7 @@
-<!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+@extends('layouts.default')
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport"
-    content="width=device-width, initial-scale=1, viewport-fit=cover" />
-
-  <title>{{ config('app.name') }}</title>
-
-  @vite(['resources/scss/index.scss', 'resources/js/index.js'])
-</head>
-
-<body class="d-flex flex-column">
-  <div class="page page-center">
+@section('body')
+  <div class="page page-center d-flex flex-column">
     <div class="container-tight container py-4">
       <div class="mb-4 text-center">
         <a class="navbar-brand navbar-brand-autodark" href=".">
@@ -48,8 +37,8 @@
                 minlength="8" maxlength="20" required
                 autocomplete="current-password">
               <span class="input-group-text">
-                <a class="link-secondary" data-bs-toggle="tooltip"
-                  href="#" title="Show password">
+                <a class="link-secondary" data-bs-toggle="tooltip" href="#"
+                  title="Show password">
                   {{-- eye --}}
                   <svg class="icon" xmlns="http://www.w3.org/2000/svg"
                     width="24" height="24" viewBox="0 0 24 24"
@@ -71,9 +60,9 @@
             <button class="btn btn-primary w-100" type="submit">
               <!-- Download SVG icon from http://tabler-icons.io/i/lock-open -->
               <svg class="icon" xmlns="http://www.w3.org/2000/svg"
-                width="24" height="24" viewBox="0 0 24 24"
-                stroke-width="2" stroke="currentColor" fill="none"
-                stroke-linecap="round" stroke-linejoin="round">
+                width="24" height="24" viewBox="0 0 24 24" stroke-width="2"
+                stroke="currentColor" fill="none" stroke-linecap="round"
+                stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                 <path
                   d="M5 11m0 2a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2z" />
@@ -87,6 +76,4 @@
       </form>
     </div>
   </div>
-</body>
-
-</html>
+@endsection
