@@ -1,5 +1,5 @@
+import '@tabler/core/dist/js/demo-theme';
+import '@tabler/core/dist/js/tabler';
 import './bootstrap';
-import './vendor/demo-theme';
-import './vendor/tabler';
 
-import.meta.glob(['./../font/**']);
+import.meta.glob(['./../font/**', './../media/**']);

@@ -1,7 +1,11 @@
-@charset 'UTF-8';
+@charset "UTF-8";
 
-@use './vendor';
-@use './font-face';
+@use '@tabler/core/dist/css/tabler.css';
+@use '@tabler/core/dist/css/tabler-flags.css';
+@use '@tabler/core/dist/css/tabler-payments.css';
+@use '@tabler/core/dist/css/tabler-vendors.css';
+
+@use './font_face';
 
 :root {
 	--tblr-font-sans-serif: 'Inter', -apple-system, BlinkMacSystemFont,
