@@ -1,10 +1,12 @@
 @charset "UTF-8";
 
+// 'node_modules'
 @use '@tabler/core/dist/css/tabler.css';
 @use '@tabler/core/dist/css/tabler-flags.css';
 @use '@tabler/core/dist/css/tabler-payments.css';
 @use '@tabler/core/dist/css/tabler-vendors.css';
 
+// './'
 @use './font_face';
 
 :root {
