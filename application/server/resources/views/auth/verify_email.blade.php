@@ -30,18 +30,19 @@
       @endif
 
       <div class="mb-4 text-center">
-        <a class="navbar-brand navbar-brand-autodark" href=".">
-          <img class="navbar-brand-image" src="./static/logo.svg" alt="Tabler"
-            width="110" height="32">
+        <a class="navbar-brand navbar-brand-autodark" href="/">
+          <img class="navbar-brand-image d-block object-contain"
+            src="{{ Vite::image('red_cross.svg') }}"
+            alt="{{ config('app.name') }}">
         </a>
       </div>
       <div class="card card-md">
         <div class="card-body">
-          <h2 class="card-title mb-4 text-center">Verify Email</h2>
+          <h2 class="card-title mb-4 text-center">Verificar email</h2>
           <p class="text-secondary mb-4">
-            Thanks for signing up! Before getting started, could you verify your
-            email address by clicking on the link we just emailed to you? If you
-            didn't receive the email, we will gladly send you another.
+            Obrigado por te registares! Antes de começares, poderias verificar o
+            teu endereço de email ao clicar no link que acabamos de enviar? Se não
+            recebeste o email, teremos todo o gosto em enviar outro.
           </p>
 
           <div class="form-footer">
@@ -59,7 +60,7 @@
                     d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
                   <path d="M3 7l9 6l9 -6" />
                 </svg>
-                Resend Verification Email
+                Reenviar email de verificação
               </button>
             </form>
             <form class="mt-2" method="POST" action="{{ route('logout') }}">
@@ -76,19 +77,11 @@
                   <path d="M9 12h12l-3 -3" />
                   <path d="M18 15l3 -3" />
                 </svg>
-                Log Out
+                Terminar sessão
               </button>
             </form>
           </div>
         </div>
-      </div>
-
-      <div class="text-secondary mt-3 text-center">
-        Forget it,
-        <a href="{{ route('sign_in') }}">
-          send me back
-        </a>
-        to the sign in screen.
       </div>
     </div>
   </div>

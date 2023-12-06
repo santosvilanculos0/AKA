@@ -4,9 +4,9 @@
   <div class="page page-center d-flex flex-column">
     <div class="container-tight container py-4">
       <div class="mb-4 text-center">
-        <a class="navbar-brand navbar-brand-autodark" href=".">
-          <img class="navbar-brand-image" src="./static/logo.svg" alt="Tabler"
-            width="110" height="32">
+        <a class="navbar-brand navbar-brand-autodark" href="/">
+          <img class="navbar-brand-image d-block object-contain"
+            src="{{ Vite::image('red_cross.svg') }}" alt="{{ config('app.name') }}">
         </a>
       </div>
 

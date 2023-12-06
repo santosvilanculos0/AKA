@@ -26,24 +26,26 @@
         </div>
       @endif
       <div class="mb-4 text-center">
-        <a class="navbar-brand navbar-brand-autodark" href=".">
-          <img class="navbar-brand-image" src="./static/logo.svg" alt="Tabler"
-            width="110" height="32">
+        <a class="navbar-brand navbar-brand-autodark" href="/">
+          <img class="navbar-brand-image d-block object-contain"
+            src="{{ Vite::image('red_cross.svg') }}"
+            alt="{{ config('app.name') }}">
         </a>
       </div>
       <div class="card card-md">
         <div class="card-body">
-          <h2 class="card-title mb-4 text-center">Forgot password</h2>
+          <h2 class="card-title mb-4 text-center">Esqueceu-se da palavra-passe?
+          </h2>
           <p class="text-secondary mb-4">
-            Enter your email address and your
-            password will be reset and emailed to you.
+            Introduza o seu endereço de email e ser-lhe-á enviado um email com o
+            link de redefinição da palavra-passe."
           </p>
 
           <form method="POST" action="{{ route('password.email') }}">
             @csrf
 
             <div class="mb-3">
-              <label class="form-label" for="email">Email address</label>
+              <label class="form-label" for="email">Email</label>
               <input id="email" name="email" type="email"
                 value="{{ old('email') }}" @class(['form-control', 'is-invalid' => $errors->get('email')])
                 maxlength="255" required autocomplete="email">
@@ -70,7 +72,7 @@
                     d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
                   <path d="M3 7l9 6l9 -6" />
                 </svg>
-                Send me new password
+                Envie-me o link
               </button>
             </div>
           </form>
@@ -78,11 +80,11 @@
       </div>
 
       <div class="text-secondary mt-3 text-center">
-        Forget it,
+        Esquece,
         <a href="{{ route('sign_in') }}">
-          send me back
+          envia-me de volta
         </a>
-        to the sign in screen.
+        para a tela de início de sessão.
       </div>
     </div>
   </div>
